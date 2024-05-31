@@ -1,0 +1,6 @@
+/CSharp.sln
+.idea
+**/bin/
+**/Properties/
+**/obj/
+**/.csproj
