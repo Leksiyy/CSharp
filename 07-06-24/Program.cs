@@ -21,7 +21,7 @@ namespace _07_06_24
 
             for (int i = 0; i < readingList.BooksCount; i++)
             {
-                Console.WriteLine(readingList[i]);
+                Console.WriteLine(Book.ShowBook(readingList[i])); /////!!!!!
             }
 
             readingList -= book2;
