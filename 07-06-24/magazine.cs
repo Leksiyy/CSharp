@@ -28,23 +28,22 @@ namespace _07_06_24
 
         public static bool operator ==(Magazine obj1, Magazine obj2)
         {
-            if (obj1 != null || obj2 != null)
+            if (obj1 is null || obj2 is null)
             {
-                return obj1.WorkersCount == obj2.WorkersCount;
+                throw new Exception("А не нужно было передавать нулл значение");
             }
 
-            throw new Exception("А не нужно было передавать нулл значение");
-        
+            return obj1.WorkersCount == obj2.WorkersCount;
         }
 
         public static bool operator !=(Magazine obj1, Magazine obj2)
         {
-            if (obj1 != null || obj2 != null)
+            if (obj1 is null || obj2 is null)
             {
-                return obj1.WorkersCount != obj2.WorkersCount;
+                throw new Exception("А не нужно было передавать нулл значение");
             }
 
-            throw new Exception("А не нужно было передавать нулл значение");
+            return (obj1.WorkersCount == obj2.WorkersCount);
         }
 
         public static bool operator <(Magazine obj1, Magazine obj2)

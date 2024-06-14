@@ -21,7 +21,7 @@ namespace _07_06_24
 
             for (int i = 0; i < readingList.BooksCount; i++)
             {
-                Console.WriteLine(Book.ShowBook(readingList[i])); /////!!!!!
+                Book.ShowBook(readingList[i]);
             }
 
             readingList -= book2;
@@ -29,7 +29,7 @@ namespace _07_06_24
             Console.WriteLine("Updated reading list:");
             for (int i = 0; i < readingList.BooksCount; i++)
             {
-                Console.WriteLine(readingList[i]);
+                Book.ShowBook(readingList[i]);
             }
 
             Console.WriteLine(readingList.ContainsBook(book2));

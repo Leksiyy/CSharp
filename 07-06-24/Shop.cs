@@ -28,22 +28,22 @@ namespace _07_06_24
 
         public static bool operator ==(Shop obj, Shop obj1)
         {
-            if (obj != null || obj1 != null)
+            if (obj is null || obj1 is null)
             {
-                return obj.Area == obj1.Area;
+                throw new Exception("А не нужно было передавать нулл значение"); 
             }
             
-            throw new Exception("А не нужно было передавать нулл значение"); 
+            return obj.Area == obj1.Area;
         }
 
         public static bool operator !=(Shop obj, Shop obj1)
         {
-            if (obj != null || obj1 != null)
+            if (obj is null || obj1 is null)
             {
-                return obj.Area != obj1.Area;
+                throw new Exception("А не нужно было передавать нулл значение");
             }
-
-            throw new Exception("А не нужно было передавать нулл значение");
+            
+            return !(obj.Area == obj1.Area);
         }
 
         public static bool operator >(Shop obj, Shop obj1)
