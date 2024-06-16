@@ -19,4 +19,9 @@ public class Book(string? title, string? author)
     {
         Console.Out.WriteLine("Title:" + book.Title + ". Author: " + book.Author + ".\n");
     }
+
+    public override string ToString()
+    {
+        return $"Author: {Author}, Title: {Title}";
+    }
 }
