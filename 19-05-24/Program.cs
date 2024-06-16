@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 
 namespace _19_05_24
 {
