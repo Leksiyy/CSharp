@@ -66,14 +66,6 @@ public class BookAccounting : IEnumerable<Book>
     // DATA_VIDANNA 
     public bool EditBook(Book book, int[] choose, string[] findOptions)
     {
-        var node = _accounting.Find(book);
-        if (node == null)
-        {
-            return false; 
-        }
-
-        Book temp = node.Value;
-
         for (int i = 0; i < choose.Length; i++)
         {
             try
@@ -81,16 +73,16 @@ public class BookAccounting : IEnumerable<Book>
                 switch (choose[i])
                 {
                     case 0:
-                        temp.BookName = findOptions[i];
+                        book.BookName = findOptions[i];
                         break;
                     case 1:
-                        temp.AuthorFullName = findOptions[i];
+                        book.AuthorFullName = findOptions[i];
                         break;
                     case 2:
-                        temp.DATA_VIDANNA = DateOnly.Parse(findOptions[i]);
+                        book.DATA_VIDANNA = DateOnly.Parse(findOptions[i]);
                         break;
                     case 3:
-                        temp.ZHANR = findOptions[i];
+                        book.ZHANR = findOptions[i];
                         break;
                     default:
                         throw new ArgumentException("Invalid choose index");

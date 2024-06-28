@@ -1,4 +1,5 @@
 ﻿using _17_06_24.BookAccounting;
+using _17_06_24.QueueEmulation;
 
 namespace _17_06_24;
 
@@ -48,7 +49,7 @@ class Program
             Console.WriteLine(coWorker);
         }
         
-        Console.WriteLine("\n ----------------------------- \n");
+        Console.WriteLine("\n ----------------------------- \n"); ////////////////////////////////////////////////////////////
         
         var books = new LinkedList<Book>(new List<Book>
         {
@@ -144,5 +145,22 @@ class Program
             new Book { AuthorFullName = "George Orwell" }
         });
         Console.WriteLine(foundBooks1[0]);
+
+        Console.WriteLine("\n ------------- \n"); ////////////////////////////////////////////////////////////
+
+        Visitor visitor1 = new Visitor("Sergey");
+        Visitor visitor2 = new Visitor("Misha");
+        Visitor visitor3 = new Visitor("Ivan");
+        Visitor visitor4 = new Visitor("Maria");
+        Visitor visitor5 = new Visitor("Victoria");
+
+        PriorityQueueClass queueClass = new PriorityQueueClass();
+        
+        queueClass.EnQueue(visitor1);
+        queueClass.EnQueue(visitor2);
+        queueClass.EnQueue(visitor3);
+        queueClass.EnQueue(visitor4);
+        queueClass.EnQueue(visitor5);
+        
     }
 }
